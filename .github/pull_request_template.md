@@ -1,15 +1,16 @@
 ## Description de la tarea
 
-<!-- Descripción sobre lo que se pide en la tarea -->
+<!-- Digitalizacion de un sistema para automatizar las tareas de LaLiga. se a creado datos de prueba -->
 
 ## ¿Cómo se ha implementado?
 
-<!-- Estructura de clases, patrones: MVVM, etc.  -->
+<!-- Se modelo cada una de las entidades que hay en el sistema -->
 
 ## Keywords
 
-<!-- Palabras relacionadas con los conceptos vistos -->
+<!-- Diagrama de clases, atributos, clases, main, etc... -->
 
 ## Screenshots or Video
 
-<!-- Captura de pantalla de la consola -->
+<!-- ![img.png](img.png) -->
+<!-- ![img_1.png](img_1.png) -->

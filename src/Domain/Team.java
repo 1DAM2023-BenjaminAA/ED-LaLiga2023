@@ -1,11 +1,18 @@
 package Domain;
 
+import java.util.ArrayList;
+
 public class Team {
 
     private Integer idTeam;
     public String name;
     public String telephone;
     public String address;
+
+    private ArrayList<Person>personsEN = new ArrayList<>();
+
+    private ArrayList<Person>perTeam;
+
 
     public Integer getIdTeam() {
         return idTeam;
@@ -38,4 +45,31 @@ public class Team {
     public void setAddress(String address) {
         this.address = address;
     }
+
+
+    public ArrayList<Person> getPerTeam() {
+        return perTeam;
+    }
+
+    public void setPerTeam(ArrayList<Person> perTeam) {
+        this.perTeam = perTeam;
+    }
+
+
+    public void addPerson(Person person){
+    personsEN.add(person);
+    }
+
+    public Person getPerson(Integer posicion){
+        return personsEN.get(posicion);
+    }
+
+
+
+
+
+
 }
+
+
+

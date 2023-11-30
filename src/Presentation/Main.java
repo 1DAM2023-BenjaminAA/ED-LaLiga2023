@@ -2,18 +2,23 @@ package Presentation;
 
 import Domain.*;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
+        ArrayList<Person>personAN = new ArrayList<>();
         President president1 = new President();
         president1.setIdPerson(1);
         president1.setName(" Alonso ");
         president1.setSurname(" Matamorros S. ");
 
+
         President president2 = new President();
         president2.setIdPerson(2);
         president2.setName(" Leo ");
         president2.setSurname(" Dominguez T. ");
+
 
         President president3 = new President();
         president3.setIdPerson(3);
@@ -135,41 +140,136 @@ public class Main {
         player15.settShirtNumber(" 25 ");
 
 
-
+        ArrayList<Team>teamsA = new ArrayList<>();
 
         Team team1 = new Team();
         team1.setIdTeam(1111);
-        team1.setName("");
-        team1.setTelephone("");
-        team1.setAddress("");
+        team1.setName("FC-Sevilla");
+        team1.setTelephone("623456783");
+        team1.setAddress("Sevilla");
+        team1.addPerson(president1);
+        team1.addPerson(coach1);
+        team1.addPerson(player1);
+        team1.addPerson(player2);
+        team1.addPerson(player3);
+        team1.addPerson(player4);
+        team1.addPerson(player5);
 
+
+
+        ArrayList<Team>teamsB = new ArrayList<>();
         Team team2 = new Team();
-        team2.setIdTeam(1111);
-        team2.setName("");
-        team2.setTelephone("");
-        team2.setAddress("");
+        team2.setIdTeam(1112);
+        team2.setName("FC-Barcelona");
+        team2.setTelephone("624243424");
+        team2.setAddress("Barcelona");
+        team2.addPerson(president2);
+        team2.addPerson(coach2);
+        team2.addPerson(player6);
+        team2.addPerson(player7);
+        team2.addPerson(player8);
+        team2.addPerson(player9);
+        team2.addPerson(player10);
 
+
+
+
+        ArrayList<Team>teamsC = new ArrayList<>();
         Team team3 = new Team();
-        team3.setIdTeam(1111);
-        team3.setName("");
-        team3.setTelephone("");
-        team3.setAddress("");
+        team3.setIdTeam(1113);
+        team3.setName("FC-Madrid");
+        team3.setTelephone("677575652");
+        team3.setAddress("Madrid");
+        team3.addPerson(president3);
+        team3.addPerson(coach3);
+        team3.addPerson(player11);
+        team3.addPerson(player12);
+        team3.addPerson(player13);
+        team3.addPerson(player14);
+        team3.addPerson(player15);
 
 
 
+
+        teamsA.add(team1);
+        teamsB.add(team2);
+        teamsC.add(team3);
 
         Match match1 = new Match();
         match1.setIdMatch(11111);
-        match1.setMatchDate("");
-        match1.setHomeTeam("");
-        match1.setAwayTeam("");
+        match1.setMatchDate("22/09/2023");
+        match1.setHomeTeam(teamsA);
+        match1.setAwayTeam(teamsB);
 
         Match match2 = new Match();
-        match2.setIdMatch(11111);
-        match2.setMatchDate("");
-        match2.setHomeTeam("");
-        match2.setAwayTeam("");
+        match2.setIdMatch(11112);
+        match2.setMatchDate(" 23/02/2023");
+        match2.setHomeTeam(teamsB);
+        match2.setAwayTeam(teamsC);
+
+imprimirTeam1(team1);
+imprimirTeam2(team2);
+imprimirTeam3(team3);
+
+imprimirMatch1(match1);
+imprimirMatch2(match2);
+
+    }
+
+    public static void imprimirTeam1(Team team1){
+
+     System.out.println("=========================================LA LIGA============================================= \n");
+     System.out.println("============================DATOS DEL PLANTEL DE EQUIPOS DE LA LIGA================================");
+     System.out.println("Equipo[A] "
+                     + "------------CODIGO EQ: " + team1.getIdTeam()
+                     + "------NOMBRE EQ: " + team1.getName()
+                     + "------TELEPHONE: " + team1.getTelephone()
+                     + "------DIRECCION: " + team1.getAddress());
 
 
     }
+
+
+    public static void imprimirTeam2(Team team2){
+
+        System.out.println("Equipo[B] "
+                + "------------CODIGO EQ: " + team2.getIdTeam()
+                + "------NOMBRE EQ: " + team2.getName()
+                + "------TELEPHONE: " + team2.getTelephone()
+                + "------DIRECCION: " + team2.getAddress());
+    }
+
+    public static void imprimirTeam3(Team team3){
+
+        System.out.println("Equipo[C] "
+                + "------------CODIGO EQ: " + team3.getIdTeam()
+                + "------NOMBRE EQ: " + team3.getName()
+                + "------TELEPHONE: " + team3.getTelephone()
+                + "------DIRECCION: " + team3.getAddress());
+    }
+
+    public static  void imprimirMatch1(Match match1){
+
+        System.out.println("========================================PARTIDOS============================================== " );
+        System.out.println("[Primer Partido] \n" +
+                  "------------CODIGO PARTIDO: " + match1.getIdMatch()
+                + "------FECHA PARTIDO: " + match1.getMatchDate()
+                + "------EQUIPO LOCAL: " + match1.getHomeTeam()
+                + "------EQUIPO VISITANTE: " + match1.getAwayTeam());
+
+    }
+
+    public static void imprimirMatch2(Match match2){
+
+        System.out.println("[Segundo Partido] \n" +
+                "------------CODIGO PARTIDO: " + match2.getIdMatch()
+                + "------FECHA PARTIDO: " + match2.getMatchDate()
+                + "------EQUIPO LOCAL: " + match2.getHomeTeam()
+                + "------EQUIPO VISITANTE: " + match2.getAwayTeam());
+
+    }
+
+
+
+
 }

@@ -1,11 +1,15 @@
 package Domain;
 
+import java.util.ArrayList;
+
 public class Match {
 
     private Integer idMatch;
     public String matchDate;
-    public String homeTeam;
-    public String awayTeam;
+
+    private ArrayList<Team>homeTeam = new ArrayList<>();
+    private ArrayList<Team>awayTeam = new ArrayList<>();
+
 
 
     public Integer getIdMatch() {
@@ -24,19 +28,28 @@ public class Match {
         this.matchDate = matchDate;
     }
 
-    public String getHomeTeam() {
-        return homeTeam;
-    }
 
-    public void setHomeTeam(String homeTeam) {
+
+    public void setHomeTeam(ArrayList<Team> homeTeam) {
         this.homeTeam = homeTeam;
     }
 
-    public String getAwayTeam() {
+    public void setAwayTeam(ArrayList<Team> awayTeam) {
+        this.awayTeam = awayTeam;
+    }
+
+
+
+
+    public ArrayList<Team> getHomeTeam() {
+        return homeTeam;
+    }
+
+    public ArrayList<Team> getAwayTeam() {
         return awayTeam;
     }
 
-    public void setAwayTeam(String awayTeam) {
-        this.awayTeam = awayTeam;
-    }
+
+
+
 }
